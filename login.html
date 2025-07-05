@@ -1,0 +1,71 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Hospital Login</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/> 
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    .lexend-font {
+      font-family: 'Lexend', "Noto Sans", sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+</head>
+<body class="bg-slate-100 lexend-font flex items-center justify-center min-h-screen">
+<div class="relative flex flex-col bg-white group/design-root overflow-x-hidden shadow-2xl rounded-xl w-full max-w-md">
+<div class="flex flex-col items-center p-8 sm:p-12">
+<div class="mb-8">
+<svg class="h-16 w-16 text-[#1993e5]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-3xl font-bold text-slate-800 mb-8">Login</h1>
+<form class="w-full space-y-6">
+<div>
+<label class="block text-sm font-medium text-slate-700 mb-1" for="document-number">Document Number</label>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 focus:outline-0 focus:ring-2 focus:ring-[#1993e5] border border-slate-300 bg-slate-50 focus:border-[#1993e5] h-12 placeholder:text-slate-400 p-3 text-base font-normal leading-normal" id="document-number" placeholder="Enter your document number" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-slate-700 mb-1" for="password">Password</label>
+<div class="relative flex w-full flex-1 items-stretch rounded-lg border border-slate-300 focus-within:ring-2 focus-within:ring-[#1993e5] focus-within:border-[#1993e5]">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-slate-900 focus:outline-0 border-0 bg-slate-50 h-12 placeholder:text-slate-400 p-3 pr-10 text-base font-normal leading-normal" id="password" placeholder="Enter your password" type="password"/>
+<button aria-label="Show/Hide password" class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-500 hover:text-[#1993e5]" id="togglePassword" type="button">
+<span class="material-symbols-outlined eye-icon">visibility</span>
+<span class="material-symbols-outlined eye-off-icon hidden">visibility_off</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-end">
+<a class="text-sm text-[#1993e5] hover:text-sky-700 hover:underline" href="#">Forgot Password?</a>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#1993e5] text-white text-base font-semibold leading-normal tracking-wide hover:bg-sky-700 transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#1993e5] focus:ring-offset-2" type="submit">
+          Login
+        </button>
+</form>
+<p class="mt-8 text-sm text-slate-600">
+        Don't have an account? <a class="font-medium text-[#1993e5] hover:text-sky-700 hover:underline" href="register.html">Register here</a>
+</p>
+</div>
+</div>
+<script>
+    const togglePasswordButton = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('password');
+    const eyeIcon = togglePasswordButton.querySelector('.eye-icon');
+    const eyeOffIcon = togglePasswordButton.querySelector('.eye-off-icon');
+    togglePasswordButton.addEventListener('click', function () {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      eyeIcon.classList.toggle('hidden');
+      eyeOffIcon.classList.toggle('hidden');
+    });
+  </script>
+
+</body></html>

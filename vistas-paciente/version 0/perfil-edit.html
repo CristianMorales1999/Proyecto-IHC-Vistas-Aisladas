@@ -1,0 +1,132 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body class="bg-slate-100">
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" style='font-family: Lexend, "Noto Sans", sans-serif;'>
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-slate-200 bg-white px-10 py-3 shadow-sm">
+<div class="flex items-center gap-4 text-slate-900">
+<div class="size-7 text-[#1993e5]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 text-xl font-bold leading-tight tracking-[-0.015em]">HealthPlus</h2>
+</div>
+<div class="flex flex-1 justify-end">
+<nav class="flex items-center gap-x-6">
+<a class="text-slate-700 hover:text-[#1993e5] text-sm font-medium leading-normal transition-colors" href="#">Dashboard</a>
+<a class="text-slate-700 hover:text-[#1993e5] text-sm font-medium leading-normal transition-colors" href="#">Patients</a>
+<a class="text-slate-700 hover:text-[#1993e5] text-sm font-medium leading-normal transition-colors" href="#">Appointments</a>
+<a class="text-slate-700 hover:text-[#1993e5] text-sm font-medium leading-normal transition-colors" href="#">Billing</a>
+<a class="text-slate-700 hover:text-[#1993e5] text-sm font-medium leading-normal transition-colors" href="#">Reports</a>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ml-4" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZxOeiutNUE0wsXmHX6-L0DEfFHPse5CawYNRyAepMBTC7wNWJ8S4jiMIPWehvHj_SHwaclyWeDiFR3gGb3bNxxBPrcexPyDkACJQ6wF_NJrDRR5C3MukY1KWpXDsLP0-TYT_LZoT0F2fx8VfhNFN3UfwFxoFN7Edx6qOH4dGIgJtuvSRQE4CfBoXvgTlPxZNRIkzBWZqV25qViKAkmUeozsNvPd6dOCkL5zTDsaBwcIJx4VGZicth8LUlOIt5b81_QU7Zn-fjrLVA");'></div>
+</nav>
+</div>
+</header>
+<main class="flex-1 bg-slate-100 py-12">
+<div class="container mx-auto px-4 max-w-3xl">
+<div class="bg-white shadow-xl rounded-lg p-8">
+<h1 class="text-slate-900 text-4xl font-bold leading-tight tracking-tight mb-8">My Profile</h1>
+<div class="mb-10 text-center">
+<div class="relative inline-block group">
+<img alt="Profile Photo" class="size-40 rounded-full object-cover border-4 border-slate-200 shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC06cRfijgCddw4zuoce5XxA5npqr3_TpxwPKkJdp_LexgYc8K0dL5m9RM0mcIVxcJOCZDg6Qv7U-bG8fCF9OVlLAVv2fTvC-oq3XBZ1r78z0A4sZdZha155svoNb3QtoXqHv6XAHgpeWdNHBHlLpZv-rH0IumDgeYr0nu-Mp8kyaywjcXxT42g6L9ouzOCsGhuRqzvF0Pg7WEWQYRUo3J_58v-GTTY58PDNe_wwPwqWgCtqkIKBcEHUGYjBYWxkdzIMniQinpK7TTo"/>
+<button class="absolute bottom-2 right-2 bg-[#1993e5] hover:bg-[#137abd] text-white p-2 rounded-full shadow-md transition-colors opacity-0 group-hover:opacity-100">
+<span class="material-icons-outlined text-base">photo_camera</span>
+</button>
+</div>
+<p class="text-slate-500 text-sm mt-2">Tap to change photo</p>
+</div>
+<section class="mb-10">
+<h2 class="text-slate-800 text-2xl font-semibold leading-tight tracking-tight border-b border-slate-200 pb-3 mb-6">Personal Data</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+<div>
+<label class="block text-slate-700 text-sm font-medium mb-1" for="name">Name</label>
+<input class="form-input w-full rounded-lg border-slate-300 focus:border-[#1993e5] focus:ring-[#1993e5]/50 shadow-sm text-slate-900 placeholder-slate-400 py-3 px-4" id="name" placeholder="Enter your name" type="text"/>
+</div>
+<div>
+<label class="block text-slate-700 text-sm font-medium mb-1" for="surname">Surname</label>
+<input class="form-input w-full rounded-lg border-slate-300 focus:border-[#1993e5] focus:ring-[#1993e5]/50 shadow-sm text-slate-900 placeholder-slate-400 py-3 px-4" id="surname" placeholder="Enter your surname" type="text"/>
+</div>
+<div>
+<label class="block text-slate-700 text-sm font-medium mb-1" for="dob">Date of Birth</label>
+<input class="form-input w-full rounded-lg border-slate-300 focus:border-[#1993e5] focus:ring-[#1993e5]/50 shadow-sm text-slate-900 placeholder-slate-400 py-3 px-4" id="dob" type="date"/>
+</div>
+<div>
+<label class="block text-slate-700 text-sm font-medium mb-1" for="gender">Gender</label>
+<select class="form-select w-full rounded-lg border-slate-300 focus:border-[#1993e5] focus:ring-[#1993e5]/50 shadow-sm text-slate-900 py-3 px-4" id="gender">
+<option>Select gender</option>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+</div>
+<div>
+<label class="block text-slate-700 text-sm font-medium mb-1" for="marital_status">Marital Status</label>
+<select class="form-select w-full rounded-lg border-slate-300 focus:border-[#1993e5] focus:ring-[#1993e5]/50 shadow-sm text-slate-900 py-3 px-4" id="marital_status">
+<option>Select status</option>
+<option>Single</option>
+<option>Married</option>
+<option>Divorced</option>
+<option>Widowed</option>
+</select>
+</div>
+</div>
+</section>
+<section class="mb-10">
+<h2 class="text-slate-800 text-2xl font-semibold leading-tight tracking-tight border-b border-slate-200 pb-3 mb-6">Contact Data</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+<div>
+<label class="block text-slate-700 text-sm font-medium mb-1" for="phone">Phone</label>
+<input class="form-input w-full rounded-lg border-slate-300 focus:border-[#1993e5] focus:ring-[#1993e5]/50 shadow-sm text-slate-900 placeholder-slate-400 py-3 px-4" id="phone" placeholder="Enter your phone number" type="tel"/>
+</div>
+<div>
+<label class="block text-slate-700 text-sm font-medium mb-1" for="email">Email</label>
+<input class="form-input w-full rounded-lg border-slate-300 focus:border-[#1993e5] focus:ring-[#1993e5]/50 shadow-sm text-slate-900 placeholder-slate-400 py-3 px-4" id="email" placeholder="Enter your email address" type="email"/>
+</div>
+</div>
+</section>
+<section class="mb-10">
+<h2 class="text-slate-800 text-2xl font-semibold leading-tight tracking-tight border-b border-slate-200 pb-3 mb-6">Address</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6">
+<div class="md:col-span-2">
+<label class="block text-slate-700 text-sm font-medium mb-1" for="address">Address</label>
+<input class="form-input w-full rounded-lg border-slate-300 focus:border-[#1993e5] focus:ring-[#1993e5]/50 shadow-sm text-slate-900 placeholder-slate-400 py-3 px-4" id="address" placeholder="Enter your street address" type="text"/>
+</div>
+<div>
+<label class="block text-slate-700 text-sm font-medium mb-1" for="region">Region</label>
+<input class="form-input w-full rounded-lg border-slate-300 focus:border-[#1993e5] focus:ring-[#1993e5]/50 shadow-sm text-slate-900 placeholder-slate-400 py-3 px-4" id="region" placeholder="Enter your region" type="text"/>
+</div>
+<div>
+<label class="block text-slate-700 text-sm font-medium mb-1" for="province">Province</label>
+<input class="form-input w-full rounded-lg border-slate-300 focus:border-[#1993e5] focus:ring-[#1993e5]/50 shadow-sm text-slate-900 placeholder-slate-400 py-3 px-4" id="province" placeholder="Enter your province" type="text"/>
+</div>
+<div>
+<label class="block text-slate-700 text-sm font-medium mb-1" for="district">District</label>
+<input class="form-input w-full rounded-lg border-slate-300 focus:border-[#1993e5] focus:ring-[#1993e5]/50 shadow-sm text-slate-900 placeholder-slate-400 py-3 px-4" id="district" placeholder="Enter your district" type="text"/>
+</div>
+<div>
+<label class="block text-slate-700 text-sm font-medium mb-1" for="country">Country</label>
+<input class="form-input w-full rounded-lg border-slate-300 focus:border-[#1993e5] focus:ring-[#1993e5]/50 shadow-sm text-slate-900 placeholder-slate-400 py-3 px-4" id="country" placeholder="Enter your country" type="text"/>
+</div>
+</div>
+</section>
+<div class="flex justify-end mt-12">
+<button class="flex items-center justify-center gap-2 min-w-[120px] cursor-pointer rounded-lg h-12 px-6 bg-[#1993e5] hover:bg-[#137abd] text-slate-50 text-base font-bold leading-normal tracking-wide shadow-md hover:shadow-lg transition-all duration-150 ease-in-out">
+<span class="material-icons-outlined">save</span>
+<span>Save Changes</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+    <meta charset="utf-8" />
+    <link crossorigin href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B600%3B700%3B800%3B900"
+      onload="this.rel='stylesheet'" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" />
+    <title>SaludIntegra - Reservar Cita</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script
+      src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+    .material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      -moz-osx-font-smoothing: grayscale;
+      font-feature-settings: 'liga';
+    }
+    .selected-specialty {
+      outline: 2px solid #1e40af;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+    }
+  </style>
+  </head>
+  <body class="bg-gray-50"
+    style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+    <div
+      class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-4 sm:px-6 lg:px-10 py-3 bg-white shadow-sm">
+          <div class="flex items-center gap-4">
+            <button
+              class="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#1e40af]">
+              <span class="material-icons">menu</span>
+            </button>
+            <div class="flex items-center gap-2 text-blue-700">
+              <span class="material-icons text-3xl">health_and_safety</span>
+              <h2 class="text-xl font-bold tracking-tight">SaludIntegra</h2>
+            </div>
+            <div
+              class="hidden lg:block ml-4 text-lg font-semibold text-gray-600">Reservar
+              Cita - Paso 1</div>
+          </div>
+          <div class="flex items-center gap-3 sm:gap-4">
+            <button
+              class="relative flex items-center justify-center rounded-full h-10 w-10 text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1e40af]">
+              <span class="material-icons">notifications</span>
+              <span
+                class="absolute top-1 right-1 h-2.5 w-2.5 rounded-full bg-red-500 border-2 border-white"></span>
+            </button>
+            <div class="relative">
+              <button
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-transparent hover:border-[#1e40af] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1e40af]"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoNZzc9gci_9cjdDg4rVbZ6Wf20TEJod9P3dhIFjFnL5AvxKo96FtYgsr7_NusV-ETfzYj9mYMWz-B6A8yMpsQWcLb8E0-RUvmTTVEbsI2lI2xASsYPL0wF0OQ1kDNJa1di6HFayGMRYO7eLxBRwYsp_mf22gcvXX2Lzw7n2hyuvEHFOXV5BkC9Q1u5xnN_Iz__RTKEehjuBPkcAsWi7FeA7gcaHfnm8Yn8Y7oaSWFYt0CvYCoG7KgffKNafzvnALl5Ent-uxRbHUu");'></button>
+            </div>
+          </div>
+        </header>
+        <div class="flex flex-1">
+          <aside
+            class="hidden lg:flex flex-col w-64 bg-white border-r border-gray-200 p-4 shadow-sm">
+            <nav class="flex flex-col gap-2 mt-4">
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150"
+                href="#">
+                <span class="material-icons">dashboard</span>
+                <span class="text-sm font-medium">Panel</span>
+              </a>
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-blue-700 bg-blue-50 border border-blue-200 rounded-lg font-semibold shadow-sm transition-colors duration-150"
+                href="#">
+                <span class="material-icons">add_circle</span>
+                <span class="text-sm">Reservar Cita</span>
+              </a>
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150"
+                href="#">
+                <span class="material-icons">chat</span>
+                <span class="text-sm font-medium">Mensajes</span>
+              </a>
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150"
+                href="#">
+                <span class="material-icons">folder</span>
+                <span class="text-sm font-medium">Documentos</span>
+              </a>
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150"
+                href="1.2.dashboard-paciente-mi-perfil.html">
+                <span class="material-icons">person</span>
+                <span class="text-sm font-medium">Perfil</span>
+              </a>
+            </nav>
+            <div class="mt-auto">
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-red-600 rounded-lg transition-colors duration-150"
+                href="../1.login.html">
+                <span class="material-icons">logout</span>
+                <span class="text-sm font-medium">Cerrar Sesión</span>
+              </a>
+            </div>
+          </aside>
+          <main class="flex-1 p-4 sm:p-6 lg:p-8 bg-gray-50">
+            <div class="max-w-4xl mx-auto">
+              <h1
+                class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Reservar
+                Cita Médica</h1>
+              <h2
+                class="text-lg sm:text-xl font-semibold text-blue-600 mb-6">Paso
+                1 de 4: Seleccione una Especialidad</h2>
+              <div class="mb-8">
+                <div class="overflow-hidden rounded-full bg-gray-200">
+                  <div class="h-2 rounded-full bg-blue-600"
+                    style="width: 25%"></div>
+                </div>
+                <div class="mt-2 flex justify-between text-xs text-gray-500">
+                  <span>Especialidad</span>
+                  <span>Médico</span>
+                  <span>Fecha y Hora</span>
+                  <span>Confirmar</span>
+                </div>
+              </div>
+              <div class="mb-6">
+                <label class="sr-only" for="search-specialty">Buscar
+                  especialidad</label>
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <span class="material-icons text-gray-400">search</span>
+                  </div>
+                  <input
+                    class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    id="search-specialty" name="search-specialty"
+                    placeholder="Buscar especialidad (ej. Cardiología, Pediatría...)"
+                    type="search" />
+                </div>
+              </div>
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+                <div aria-checked="false"
+                  class="group bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2 border-transparent focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500"
+                  onclick="this.classList.toggle('selected-specialty'); this.setAttribute('aria-checked', this.classList.contains('selected-specialty')); document.querySelectorAll('.selected-specialty').forEach(el =&gt; { if(el !== this) { el.classList.remove('selected-specialty'); el.setAttribute('aria-checked', 'false');}}); document.getElementById('nextButton').disabled = !this.classList.contains('selected-specialty');"
+                  role="radio" tabindex="0">
+                  <div class="flex items-center gap-4 mb-2">
+                    <span
+                      class="material-icons text-3xl text-blue-600">favorite_border</span>
+                    <h3
+                      class="text-lg font-semibold text-gray-800 group-hover:text-blue-700">Cardiología</h3>
+                  </div>
+                  <p class="text-sm text-gray-600">Especialistas en afecciones
+                    cardíacas y del sistema cardiovascular. Ofrecemos
+                    diagnósticos y tratamientos avanzados.</p>
+                </div>
+                <div aria-checked="false"
+                  class="group bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2 border-transparent focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500"
+                  onclick="this.classList.toggle('selected-specialty'); this.setAttribute('aria-checked', this.classList.contains('selected-specialty')); document.querySelectorAll('.selected-specialty').forEach(el =&gt; { if(el !== this) { el.classList.remove('selected-specialty'); el.setAttribute('aria-checked', 'false'); }}); document.getElementById('nextButton').disabled = !this.classList.contains('selected-specialty');"
+                  role="radio" tabindex="0">
+                  <div class="flex items-center gap-4 mb-2">
+                    <span
+                      class="material-icons text-3xl text-blue-600">child_care</span>
+                    <h3
+                      class="text-lg font-semibold text-gray-800 group-hover:text-blue-700">Pediatría</h3>
+                  </div>
+                  <p class="text-sm text-gray-600">Atención integral para bebés,
+                    niños y adolescentes. Enfoque en el bienestar y
+                    desarrollo.</p>
+                </div>
+                <div aria-checked="false"
+                  class="group bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2 border-transparent focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500"
+                  onclick="this.classList.toggle('selected-specialty'); this.setAttribute('aria-checked', this.classList.contains('selected-specialty')); document.querySelectorAll('.selected-specialty').forEach(el =&gt; { if(el !== this) { el.classList.remove('selected-specialty'); el.setAttribute('aria-checked', 'false'); }}); document.getElementById('nextButton').disabled = !this.classList.contains('selected-specialty');"
+                  role="radio" tabindex="0">
+                  <div class="flex items-center gap-4 mb-2">
+                    <span
+                      class="material-icons text-3xl text-blue-600">spa</span>
+                    <h3
+                      class="text-lg font-semibold text-gray-800 group-hover:text-blue-700">Dermatología</h3>
+                  </div>
+                  <p class="text-sm text-gray-600">Diagnóstico y tratamiento de
+                    afecciones de la piel, cabello y uñas. Dermatología
+                    cosmética y médica.</p>
+                </div>
+                <div aria-checked="false"
+                  class="group bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2 border-transparent focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500"
+                  onclick="this.classList.toggle('selected-specialty'); this.setAttribute('aria-checked', this.classList.contains('selected-specialty')); document.querySelectorAll('.selected-specialty').forEach(el =&gt; { if(el !== this) { el.classList.remove('selected-specialty'); el.setAttribute('aria-checked', 'false'); }}); document.getElementById('nextButton').disabled = !this.classList.contains('selected-specialty');"
+                  role="radio" tabindex="0">
+                  <div class="flex items-center gap-4 mb-2">
+                    <span
+                      class="material-icons text-3xl text-blue-600">psychology</span>
+                    <h3
+                      class="text-lg font-semibold text-gray-800 group-hover:text-blue-700">Neurología</h3>
+                  </div>
+                  <p class="text-sm text-gray-600">Atención para trastornos del
+                    sistema nervioso, incluyendo cerebro, médula espinal y
+                    nervios.</p>
+                </div>
+                <div aria-checked="false"
+                  class="group bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2 border-transparent focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500"
+                  onclick="this.classList.toggle('selected-specialty'); this.setAttribute('aria-checked', this.classList.contains('selected-specialty')); document.querySelectorAll('.selected-specialty').forEach(el =&gt; { if(el !== this) { el.classList.remove('selected-specialty'); el.setAttribute('aria-checked', 'false'); }}); document.getElementById('nextButton').disabled = !this.classList.contains('selected-specialty');"
+                  role="radio" tabindex="0">
+                  <div class="flex items-center gap-4 mb-2">
+                    <span
+                      class="material-icons text-3xl text-blue-600">healing</span>
+                    <h3
+                      class="text-lg font-semibold text-gray-800 group-hover:text-blue-700">Ortopedia</h3>
+                  </div>
+                  <p class="text-sm text-gray-600">Tratamiento de problemas del
+                    sistema musculoesquelético, incluyendo huesos,
+                    articulaciones, ligamentos y tendones.</p>
+                </div>
+                <div aria-checked="false"
+                  class="group bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2 border-transparent focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500"
+                  onclick="this.classList.toggle('selected-specialty'); this.setAttribute('aria-checked', this.classList.contains('selected-specialty')); document.querySelectorAll('.selected-specialty').forEach(el =&gt; { if(el !== this) { el.classList.remove('selected-specialty'); el.setAttribute('aria-checked', 'false'); }}); document.getElementById('nextButton').disabled = !this.classList.contains('selected-specialty');"
+                  role="radio" tabindex="0">
+                  <div class="flex items-center gap-4 mb-2">
+                    <span
+                      class="material-icons text-3xl text-blue-600">biotech</span>
+                    <h3
+                      class="text-lg font-semibold text-gray-800 group-hover:text-blue-700">Oncología</h3>
+                  </div>
+                  <p class="text-sm text-gray-600">Atención integral del cáncer,
+                    desde el diagnóstico y tratamiento hasta el apoyo a la
+                    supervivencia.</p>
+                </div>
+              </div>
+              <div class="mt-8 flex flex-col sm:flex-row justify-end gap-3">
+                <button
+                  class="w-full sm:w-auto px-6 py-3 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-150"
+                  type="button">
+                  Cancelar
+                </button>
+                <button
+                  class="w-full sm:w-auto px-6 py-3 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors duration-150"
+                  disabled id="nextButton" type="button">
+                  Siguiente
+                </button>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+
+  </body></html>

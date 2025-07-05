@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link crossorigin href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B600%3B700%3B800%3B900"
+      onload="this.rel='stylesheet'" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" />
+    <title>SaludIntegra - Reservar Cita - Confirmación y Pago</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script
+      src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+    .material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      -moz-osx-font-smoothing: grayscale;
+      font-feature-settings: 'liga';
+    }
+    input[type="radio"]:checked+label {
+      border-color: #1e40af;
+      background-color: #e0e7ff;
+      color: #1e3a8a;
+    }
+  </style>
+  </head>
+  <body class="bg-gray-50"
+    style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+    <div
+      class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-4 sm:px-6 lg:px-10 py-3 bg-white shadow-sm">
+          <div class="flex items-center gap-4">
+            <button
+              class="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#1e40af]">
+              <span class="material-icons">menu</span>
+            </button>
+            <div class="flex items-center gap-2 text-blue-700">
+              <span class="material-icons text-3xl">health_and_safety</span>
+              <h2 class="text-xl font-bold tracking-tight">SaludIntegra</h2>
+            </div>
+            <div
+              class="hidden lg:block ml-4 text-lg font-semibold text-gray-600">Reservar
+              Cita - Paso 4</div>
+          </div>
+          <div class="flex items-center gap-3 sm:gap-4">
+            <button
+              class="relative flex items-center justify-center rounded-full h-10 w-10 text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1e40af]">
+              <span class="material-icons">notifications</span>
+              <span
+                class="absolute top-1 right-1 h-2.5 w-2.5 rounded-full bg-red-500 border-2 border-white"></span>
+            </button>
+            <div class="relative">
+              <button
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-transparent hover:border-[#1e40af] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1e40af]"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoNZzc9gci_9cjdDg4rVbZ6Wf20TEJod9P3dhIFjFnL5AvxKo96FtYgsr7_NusV-ETfzYj9mYMWz-B6A8yMpsQWcLb8E0-RUvmTTVEbsI2lI2xASsYPL0wF0OQ1kDNJa1di6HFayGMRYO7eLxBRwYsp_mf22gcvXX2Lzw7n2hyuvEHFOXV5BkC9Q1u5xnN_Iz__RTKEehjuBPkcAsWi7FeA7gcaHfnm8Yn8Y7oaSWFYt0CvYCoG7KgffKNafzvnALl5Ent-uxRbHUu");'></button>
+            </div>
+          </div>
+        </header>
+        <div class="flex flex-1">
+          <aside
+            class="hidden lg:flex flex-col w-64 bg-white border-r border-gray-200 p-4 shadow-sm">
+            <nav class="flex flex-col gap-2 mt-4">
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150"
+                href="1.dashboard-paciente.html">
+                <span class="material-icons">dashboard</span>
+                <span class="text-sm font-medium">Panel</span>
+              </a>
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-blue-700 bg-blue-50 border border-blue-200 rounded-lg font-semibold shadow-sm transition-colors duration-150"
+                href="2.recervar-cita-paso-1-especialidad.html">
+                <span class="material-icons">add_circle</span>
+                <span class="text-sm">Reservar Cita</span>
+              </a>
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150"
+                href="#">
+                <span class="material-icons">chat</span>
+                <span class="text-sm font-medium">Mensajes</span>
+              </a>
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150"
+                href="#">
+                <span class="material-icons">folder</span>
+                <span class="text-sm font-medium">Documentos</span>
+              </a>
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150"
+                href="1.2.dashboard-paciente-mi-perfil.html">
+                <span class="material-icons">person</span>
+                <span class="text-sm font-medium">Perfil</span>
+              </a>
+            </nav>
+            <div class="mt-auto">
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-red-600 rounded-lg transition-colors duration-150"
+                href="../1.login.html">
+                <span class="material-icons">logout</span>
+                <span class="text-sm font-medium">Cerrar Sesión</span>
+              </a>
+            </div>
+          </aside>
+          <main class="flex-1 p-4 sm:p-6 lg:p-8 bg-gray-50">
+            <div class="max-w-4xl mx-auto">
+              <h1
+                class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Reservar
+                Cita Médica</h1>
+              <h2
+                class="text-lg sm:text-xl font-semibold text-blue-600 mb-6">Paso
+                4 de 4: Confirmación y Pago</h2>
+              <div class="mb-8">
+                <div class="overflow-hidden rounded-full bg-gray-200">
+                  <div class="h-2 rounded-full bg-blue-600"
+                    style="width: 100%"></div>
+                </div>
+                <div class="mt-2 flex justify-between text-xs text-gray-500">
+                  <span>Especialidad</span>
+                  <span>Médico</span>
+                  <span>Fecha y Hora</span>
+                  <span class="font-semibold text-blue-600">Confirmar</span>
+                </div>
+              </div>
+              <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-800 mb-6">Resumen de
+                  la Cita</h3>
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 mb-8 text-sm">
+                  <div>
+                    <p class="text-gray-500">Paciente:</p>
+                    <p class="font-medium text-gray-700">Andrea Rodriguez</p>
+                  </div>
+                  <div>
+                    <p class="text-gray-500">Especialidad:</p>
+                    <p class="font-medium text-gray-700">Cardiología</p>
+                  </div>
+                  <div>
+                    <p class="text-gray-500">Médico:</p>
+                    <p class="font-medium text-gray-700">Dr. Carlos Ramirez</p>
+                  </div>
+                  <div>
+                    <p class="text-gray-500">Fecha:</p>
+                    <p class="font-medium text-gray-700">22 de Mayo, 2024</p>
+                  </div>
+                  <div>
+                    <p class="text-gray-500">Hora:</p>
+                    <p class="font-medium text-gray-700">09:00 AM</p>
+                  </div>
+                  <div>
+                    <p class="text-gray-500">Costo:</p>
+                    <p class="font-medium text-gray-700">S/ 150.00</p>
+                  </div>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Método de
+                  Pago</h3>
+                <div class="space-y-4 mb-8">
+                  <div>
+                    <input class="sr-only" id="onlinePayment"
+                      name="paymentMethod" onchange="togglePaymentFields()"
+                      type="radio" value="online" />
+                    <label
+                      class="flex items-center p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors duration-150"
+                      for="onlinePayment">
+                      <span
+                        class="material-icons mr-3 text-blue-600">credit_card</span>
+                      <span class="font-medium text-gray-700">Pago en
+                        Línea</span>
+                    </label>
+                  </div>
+                  <div>
+                    <input class="sr-only" id="transferPayment"
+                      name="paymentMethod" onchange="togglePaymentFields()"
+                      type="radio" value="transfer" />
+                    <label
+                      class="flex items-center p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors duration-150"
+                      for="transferPayment">
+                      <span
+                        class="material-icons mr-3 text-green-600">qr_code_2</span>
+                      <span class="font-medium text-gray-700">Transferencia /
+                        Yape / Plin (Subir Comprobante)</span>
+                    </label>
+                  </div>
+                  <div>
+                    <input class="sr-only" id="clinicPayment"
+                      name="paymentMethod" onchange="togglePaymentFields()"
+                      type="radio" value="clinic" />
+                    <label
+                      class="flex items-center p-4 border-2 border-gray-300 rounded-lg cursor-pointer hover:border-blue-500 transition-colors duration-150"
+                      for="clinicPayment">
+                      <span
+                        class="material-icons mr-3 text-purple-600">store</span>
+                      <span class="font-medium text-gray-700">Pago en
+                        Clínica</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="hidden space-y-4 mb-8" id="onlinePaymentFields">
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700"
+                      for="cardNumber">Número de Tarjeta</label>
+                    <input
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                      id="cardNumber" name="cardNumber"
+                      placeholder="•••• •••• •••• ••••" type="text" />
+                  </div>
+                  <div class="grid grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700"
+                        for="expiryDate">Fecha de Expiración</label>
+                      <input
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                        id="expiryDate" name="expiryDate" placeholder="MM/AA"
+                        type="text" />
+                    </div>
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700"
+                        for="cvv">CVV</label>
+                      <input
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+                        id="cvv" name="cvv" placeholder="•••" type="text" />
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden space-y-4 mb-8" id="transferPaymentFields">
+                  <p class="text-sm text-gray-600">Por favor, realice la
+                    transferencia a una de las siguientes cuentas y luego suba
+                    el comprobante:</p>
+                  <ul
+                    class="list-disc list-inside text-sm text-gray-500 pl-4 space-y-1">
+                    <li>BCP: 191-12345678-0-00 (SaludIntegra SAC)</li>
+                    <li>Yape/Plin: 987654321</li>
+                  </ul>
+                  <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1"
+                      for="receiptUpload">Subir Comprobante</label>
+                    <div
+                      class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                      <div class="space-y-1 text-center">
+                        <span
+                          class="material-icons text-4xl text-gray-400">cloud_upload</span>
+                        <div class="flex text-sm text-gray-600">
+                          <label
+                            class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500"
+                            for="file-upload">
+                            <span>Seleccione un archivo</span>
+                            <input class="sr-only" id="file-upload"
+                              name="file-upload"
+                              onchange="displayFileName(this)" type="file" />
+                          </label>
+                          <p class="pl-1">o arrástrelo aquí</p>
+                        </div>
+                        <p class="text-xs text-gray-500">PNG, JPG, PDF hasta
+                          10MB</p>
+                      </div>
+                    </div>
+                    <p class="mt-2 text-sm text-gray-500"
+                      id="fileNameDisplay"></p>
+                  </div>
+                </div>
+                <div
+                  class="hidden p-4 mb-8 bg-blue-50 border border-blue-200 rounded-lg"
+                  id="clinicPaymentMessage">
+                  <p class="text-sm text-blue-700">Su cita quedará
+                    pre-reservada. Complete el pago en la clínica hasta el
+                    <strong>21 de Mayo, 2024 a las 18:00 PM</strong> para
+                    confirmar.</p>
+                </div>
+                <div
+                  class="mt-8 flex flex-col sm:flex-row justify-between items-center gap-3">
+                  <button
+                    class="w-full sm:w-auto px-6 py-3 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-150"
+                    type="button">
+                    Anterior
+                  </button>
+                  <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                    <button
+                      class="w-full sm:w-auto px-6 py-3 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-150"
+                      type="button">
+                      Cancelar
+                    </button>
+                    <button
+                      class="w-full sm:w-auto px-6 py-3 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors duration-150"
+                      disabled id="confirmButton" type="button">
+                      Confirmar Reserva
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+    <script>
+    function togglePaymentFields() {
+      const onlinePaymentFields = document.getElementById('onlinePaymentFields');
+      const transferPaymentFields = document.getElementById('transferPaymentFields');
+      const clinicPaymentMessage = document.getElementById('clinicPaymentMessage');
+      const confirmButton = document.getElementById('confirmButton');
+      const onlinePaymentRadio = document.getElementById('onlinePayment');
+      const transferPaymentRadio = document.getElementById('transferPayment');
+      const clinicPaymentRadio = document.getElementById('clinicPayment');
+      const fileUpload = document.getElementById('file-upload');
+      onlinePaymentFields.classList.add('hidden');
+      transferPaymentFields.classList.add('hidden');
+      clinicPaymentMessage.classList.add('hidden');
+      confirmButton.disabled = true;
+      if (onlinePaymentRadio.checked) {
+        onlinePaymentFields.classList.remove('hidden');
+        confirmButton.disabled = false; // Simplificado, validación de tarjeta podría añadirse
+      } else if (transferPaymentRadio.checked) {
+        transferPaymentFields.classList.remove('hidden');
+        confirmButton.disabled = !fileUpload.files.length > 0;
+      } else if (clinicPaymentRadio.checked) {
+        clinicPaymentMessage.classList.remove('hidden');
+        confirmButton.disabled = false;
+      }
+    }
+    function displayFileName(input) {
+      const fileNameDisplay = document.getElementById('fileNameDisplay');
+      const confirmButton = document.getElementById('confirmButton');
+      if (input.files && input.files.length > 0) {
+        fileNameDisplay.textContent = `Archivo seleccionado: ${input.files[0].name}`;
+        if (document.getElementById('transferPayment').checked) {
+          confirmButton.disabled = false;
+        }
+      } else {
+        fileNameDisplay.textContent = '';
+        if (document.getElementById('transferPayment').checked) {
+          confirmButton.disabled = true;
+        }
+      }
+    }
+    // Initialize button state and attach event listeners
+    document.addEventListener('DOMContentLoaded', () => {
+      const paymentMethodRadios = document.querySelectorAll('input[name="paymentMethod"]');
+      paymentMethodRadios.forEach(radio => {
+        radio.addEventListener('change', togglePaymentFields);
+      });
+      const fileUploadInput = document.getElementById('file-upload');
+      if (fileUploadInput) {
+        fileUploadInput.addEventListener('change', () => displayFileName(fileUploadInput));
+      }
+      togglePaymentFields(); // Call once to set initial state based on any pre-checked radio
+    });
+  </script>
+
+  </body></html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+    <meta charset="utf-8" />
+    <link crossorigin href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+      onload="this.rel='stylesheet'" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet" />
+    <title>SaludIntegra - Restablecer Contraseña</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script
+      src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+    :root {
+      --saludintegra-blue: #197fe5;
+      --saludintegra-gray: #6b7280;
+      --saludintegra-light-gray: #f3f4f6;
+      --saludintegra-error-red: #ef4444;
+      --saludintegra-success-green: #10b981;
+    }
+    body {
+      font-family: "Public Sans", "Noto Sans", sans-serif;
+    }
+    .form-input {
+      @apply block w-full rounded-md border-slate-300 bg-slate-50 placeholder-slate-400 focus:border-[var(--saludintegra-blue)] focus:ring-[var(--saludintegra-blue)] h-11 px-4 text-sm shadow-sm;
+    }
+    .btn-primary {
+      @apply w-full flex items-center justify-center gap-2 rounded-md h-11 px-4 bg-[var(--saludintegra-blue)] text-white text-sm font-semibold shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-150;
+    }
+    .link-primary {
+      @apply text-sm text-[var(--saludintegra-blue)] hover:text-blue-700 hover:underline;
+    }
+    .btn-nav {
+      @apply flex items-center justify-center gap-2 rounded-md h-9 px-3 text-sm font-medium leading-normal tracking-[-0.015em] transition-colors duration-150;
+    }
+    .btn-nav-primary {
+      @apply btn-nav bg-[var(--saludintegra-blue)] text-white hover:bg-blue-700;
+    }
+    .btn-nav-secondary {
+       @apply btn-nav text-[var(--saludintegra-blue)] hover:bg-sky-100/70;
+    }
+  </style>
+  </head>
+  <body class="bg-slate-100">
+    <div
+      class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 px-6 sm:px-10 py-4 bg-white shadow-sm">
+          <div class="flex items-center gap-3 text-slate-800">
+            <div class="size-7 text-[var(--saludintegra-blue)]">
+              <svg fill="none" viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"
+                  fill="currentColor"></path>
+              </svg>
+            </div>
+            <h1 class="text-xl font-bold tracking-tight">SaludIntegra</h1>
+          </div>
+          <a class="btn-nav btn-nav-primary min-w-[84px]" href="1.login.html">
+            <span class="material-icons-outlined text-lg">login</span>
+            <span class="truncate">Volver al Inicio</span>
+          </a>
+        </header>
+        <main
+          class="flex flex-1 justify-center items-center py-8 sm:py-12 px-4">
+          <div
+            class="bg-white shadow-xl rounded-xl w-full max-w-md p-6 sm:p-10">
+            <div class="text-center mb-8">
+              <h2
+                class="text-slate-900 text-2xl sm:text-3xl font-bold leading-tight tracking-tight">Restablecer
+                Contraseña</h2>
+              <p
+                class="text-[var(--saludintegra-gray)] text-sm sm:text-base mt-3">
+                Se ha enviado un código de verificación al método de contacto
+                asociado a su DNI <strong
+                  class="font-medium text-slate-700">****5678</strong>. Por
+                favor, ingrese el código y establezca su nueva contraseña.
+              </p>
+            </div>
+            <form class="space-y-6">
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-1"
+                  for="verification-code">Código de Verificación</label>
+                <input class="form-input" id="verification-code"
+                  placeholder="Ingrese el código de 6 dígitos" type="text" />
+                <div class="mt-2 text-right text-sm">
+                  <span class="text-slate-600">¿No recibió el código? </span><a
+                    class="link-primary" href="#">Reenviar código</a>
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-1"
+                  for="new-password">Nueva Contraseña</label>
+                <div class="relative">
+                  <input class="form-input pr-10" id="new-password"
+                    placeholder="Mínimo 8 caracteres" type="password" />
+                  <button
+                    class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400 hover:text-[var(--saludintegra-blue)]"
+                    onclick="togglePasswordVisibility('new-password', this)"
+                    type="button">
+                    <span
+                      class="material-icons-outlined text-xl">visibility_off</span>
+                  </button>
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-slate-700 mb-1"
+                  for="confirm-password">Confirmar Nueva Contraseña</label>
+                <div class="relative">
+                  <input class="form-input pr-10" id="confirm-password"
+                    placeholder="Repita su nueva contraseña" type="password" />
+                  <button
+                    class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-400 hover:text-[var(--saludintegra-blue)]"
+                    onclick="togglePasswordVisibility('confirm-password', this)"
+                    type="button">
+                    <span
+                      class="material-icons-outlined text-xl">visibility_off</span>
+                  </button>
+                </div>
+              </div>
+              <div class="hidden" id="error-message-container">
+                <div class="bg-red-50 p-3 rounded-md">
+                  <p class="text-sm text-[var(--saludintegra-error-red)]"
+                    id="error-message-text"></p>
+                </div>
+              </div>
+              <div class="hidden" id="success-message-container">
+                <div class="bg-green-50 p-3 rounded-md">
+                  <p class="text-sm text-[var(--saludintegra-success-green)]"
+                    id="success-message-text"></p>
+                </div>
+              </div>
+              <button class="btn-primary" type="submit">
+                <span class="material-icons-outlined text-lg">lock_reset</span>
+                Restablecer Contraseña
+              </button>
+            </form>
+          </div>
+        </main>
+        <footer
+          class="w-full border-t border-slate-200 bg-white py-8 text-center">
+          <div class="max-w-4xl mx-auto px-4">
+            <div
+              class="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-4 mb-4">
+              <a
+                class="text-slate-500 hover:text-[var(--saludintegra-blue)] text-sm transition-colors"
+                href="3.terminos&condiciones.html">Términos y Condiciones</a>
+              <a
+                class="text-slate-500 hover:text-[var(--saludintegra-blue)] text-sm transition-colors"
+                href="4.politicas&privacidad.html">Política de Privacidad</a>
+              <span class="text-slate-500 text-sm">Contacto:
+                soporte@saludintegra.com</span>
+            </div>
+            <p class="text-slate-500 text-sm">© 2023 SaludIntegra. Todos los
+              derechos reservados.</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+    function togglePasswordVisibility(inputId, button) {
+      const input = document.getElementById(inputId);
+      const icon = button.querySelector('span');
+      if (input.type === "password") {
+        input.type = "text";
+        icon.textContent = "visibility";
+      } else {
+        input.type = "password";
+        icon.textContent = "visibility_off";
+      }
+    }
+  </script>
+
+  </body></html>

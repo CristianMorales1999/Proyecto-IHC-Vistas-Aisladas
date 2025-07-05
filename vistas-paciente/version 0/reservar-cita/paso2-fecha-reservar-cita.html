@@ -1,0 +1,239 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<title>Stitch Design</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+      .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;-webkit-font-smoothing: antialiased;text-rendering: optimizeLegibility;-moz-osx-font-smoothing: grayscale;font-feature-settings: 'liga';
+      }
+      .calendar-day:hover div {
+        @apply bg-gray-200;
+      }
+      .calendar-day.selected div {
+        @apply bg-[#b2d1e5] text-white;
+      }
+      .calendar-day.today div {
+        @apply border border-[#b2d1e5];
+      }
+      .time-slot:hover {
+        @apply border-[#b2d1e5] bg-blue-50;
+      }
+      .time-slot input:checked + div {
+        @apply border-[#b2d1e5] bg-[#b2d1e5] text-white;
+      }
+      .time-slot input:checked + div p {
+        @apply text-white;
+      }
+    </style>
+</head>
+<body style="font-family: Lexend, 'Noto Sans', sans-serif;">
+<div class="relative flex size-full min-h-screen flex-col bg-gray-100 group/design-root overflow-x-hidden" style="--radio-dot-svg: url('data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill%3D%27%23ffffff%27 xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3e%3ccircle cx%3D%278%27 cy%3D%278%27 r%3D%273%27/%3e%3c/svg%3e');">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 bg-white px-10 py-4 shadow-sm">
+<div class="flex items-center gap-4 text-gray-800">
+<div class="size-7 text-[#b2d1e5]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-gray-800 text-xl font-bold leading-tight tracking-[-0.015em]">HealthPlus</h2>
+</div>
+<div class="flex flex-1 justify-end gap-6">
+<nav class="flex items-center gap-8">
+<a class="text-gray-700 hover:text-[#b2d1e5] text-sm font-medium leading-normal transition-colors" href="#">Home</a>
+<a class="text-gray-700 hover:text-[#b2d1e5] text-sm font-medium leading-normal transition-colors" href="#">Doctors</a>
+<a class="text-gray-700 hover:text-[#b2d1e5] text-sm font-medium leading-normal transition-colors" href="#">Departments</a>
+<a class="text-gray-700 hover:text-[#b2d1e5] text-sm font-medium leading-normal transition-colors" href="#">Contact</a>
+</nav>
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors">
+<span class="material-icons text-xl">notifications</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-gray-300" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRd8ePyjYmEiGcsarI8NfQzXUQNOVjexVKQXCq6p2LqUVhhXOKrBs2XnUt4Z16PvaYR-N5wfM6SdKH06ZZTwjysR-w-_VCHQOakrDjr5fd_3wIPvbxVUfAvZlzzvNTPAWeJTXRo4xA48bSSrksA_REevgD0Vs3YUlcrEOuzuy7z6gLkAd_G_pvraCOYICc4dT0iyRzcg7WRyPdQGKz-P8My3kerVvCQ1tGWjx1pm_qPnAob0Chx2aCGL9kKJjbd_XBbmNPLOyWadTx");'></div>
+</div>
+</header>
+<main class="px-40 flex flex-1 justify-center py-8">
+<div class="layout-content-container flex flex-col w-full max-w-4xl bg-white shadow-lg rounded-xl p-8">
+<div class="flex items-center gap-2 p-4 border-b border-gray-200 mb-6">
+<a class="text-gray-500 hover:text-[#b2d1e5] text-sm font-medium leading-normal transition-colors" href="#">Book Appointment</a>
+<span class="text-gray-400 text-sm font-medium leading-normal">/</span>
+<span class="text-gray-800 text-sm font-medium leading-normal">Select Date and Time</span>
+</div>
+<div class="flex flex-wrap justify-between items-center gap-3 p-4 mb-8">
+<h1 class="text-gray-800 tracking-tight text-3xl font-bold leading-tight">Book Appointment - Step 2</h1>
+<p class="text-gray-600 text-lg">Select Date and Time for <span class="font-semibold text-gray-700">Dr. Emily Carter</span></p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 p-4">
+<div class="md:col-span-2 bg-white p-6 rounded-lg shadow-md">
+<div class="flex items-center justify-between mb-4">
+<button class="p-2 rounded-full hover:bg-gray-100 text-gray-600 transition-colors">
+<span class="material-icons text-2xl">chevron_left</span>
+</button>
+<p class="text-gray-800 text-lg font-semibold leading-tight">July 2024</p>
+<button class="p-2 rounded-full hover:bg-gray-100 text-gray-600 transition-colors">
+<span class="material-icons text-2xl">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7 gap-1">
+<p class="text-gray-500 text-xs font-bold text-center h-10 flex items-center justify-center">SUN</p>
+<p class="text-gray-500 text-xs font-bold text-center h-10 flex items-center justify-center">MON</p>
+<p class="text-gray-500 text-xs font-bold text-center h-10 flex items-center justify-center">TUE</p>
+<p class="text-gray-500 text-xs font-bold text-center h-10 flex items-center justify-center">WED</p>
+<p class="text-gray-500 text-xs font-bold text-center h-10 flex items-center justify-center">THU</p>
+<p class="text-gray-500 text-xs font-bold text-center h-10 flex items-center justify-center">FRI</p>
+<p class="text-gray-500 text-xs font-bold text-center h-10 flex items-center justify-center">SAT</p>
+<button class="h-10 w-full text-gray-400 col-start-1 text-sm font-medium leading-normal cursor-not-allowed calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">29</div>
+</button>
+<button class="h-10 w-full text-gray-400 col-start-2 text-sm font-medium leading-normal cursor-not-allowed calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">30</div>
+</button>
+<button class="h-10 w-full text-gray-700 col-start-3 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">1</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">2</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day today">
+<div class="flex size-full items-center justify-center rounded-full">3</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">4</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day selected">
+<div class="flex size-full items-center justify-center rounded-full">5</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">6</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">7</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">8</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">9</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">10</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">11</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">12</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">13</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">14</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">15</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">16</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">17</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">18</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">19</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">20</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">21</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">22</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">23</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">24</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">25</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">26</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">27</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">28</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">29</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">30</div>
+</button>
+<button class="h-10 w-full text-gray-700 text-sm font-medium leading-normal calendar-day">
+<div class="flex size-full items-center justify-center rounded-full">31</div>
+</button>
+</div>
+</div>
+<div class="md:col-span-1 bg-white p-6 rounded-lg shadow-md">
+<h3 class="text-gray-800 text-lg font-semibold mb-4">Available Time Slots <span class="text-gray-500 text-sm">(July 5, 2024)</span></h3>
+<div class="flex flex-col gap-3">
+<label class="flex items-center gap-3 rounded-lg border border-solid border-gray-300 p-3 cursor-pointer transition-all time-slot">
+<input checked="" class="h-5 w-5 appearance-none border-2 border-gray-300 rounded-full bg-transparent checked:border-[#b2d1e5] checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-[#b2d1e5]" name="time_slot" type="radio" value="09:00"/>
+<div class="flex-grow"><p class="text-gray-700 text-sm font-medium leading-normal">9:00 AM</p></div>
+</label>
+<label class="flex items-center gap-3 rounded-lg border border-solid border-gray-300 p-3 cursor-pointer transition-all time-slot">
+<input class="h-5 w-5 appearance-none border-2 border-gray-300 rounded-full bg-transparent checked:border-[#b2d1e5] checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-[#b2d1e5]" name="time_slot" type="radio" value="10:00"/>
+<div class="flex-grow"><p class="text-gray-700 text-sm font-medium leading-normal">10:00 AM</p></div>
+</label>
+<label class="flex items-center gap-3 rounded-lg border border-solid border-gray-300 p-3 cursor-pointer transition-all time-slot">
+<input class="h-5 w-5 appearance-none border-2 border-gray-300 rounded-full bg-transparent checked:border-[#b2d1e5] checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-[#b2d1e5]" name="time_slot" type="radio" value="11:00"/>
+<div class="flex-grow"><p class="text-gray-700 text-sm font-medium leading-normal">11:00 AM</p></div>
+</label>
+<label class="flex items-center gap-3 rounded-lg border border-solid border-gray-300 p-3 cursor-pointer transition-all time-slot">
+<input class="h-5 w-5 appearance-none border-2 border-gray-300 rounded-full bg-transparent checked:border-[#b2d1e5] checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-[#b2d1e5]" name="time_slot" type="radio" value="13:00"/>
+<div class="flex-grow"><p class="text-gray-700 text-sm font-medium leading-normal">1:00 PM</p></div>
+</label>
+<label class="flex items-center gap-3 rounded-lg border border-solid border-gray-300 p-3 cursor-pointer transition-all time-slot">
+<input class="h-5 w-5 appearance-none border-2 border-gray-300 rounded-full bg-transparent checked:border-[#b2d1e5] checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-[#b2d1e5]" name="time_slot" type="radio" value="14:00"/>
+<div class="flex-grow"><p class="text-gray-700 text-sm font-medium leading-normal">2:00 PM</p></div>
+</label>
+<label class="flex items-center gap-3 rounded-lg border border-solid border-gray-300 p-3 cursor-pointer transition-all time-slot">
+<input class="h-5 w-5 appearance-none border-2 border-gray-300 rounded-full bg-transparent checked:border-[#b2d1e5] checked:bg-[image:--radio-dot-svg] focus:outline-none focus:ring-0 focus:ring-offset-0 checked:focus:border-[#b2d1e5]" name="time_slot" type="radio" value="15:00"/>
+<div class="flex-grow"><p class="text-gray-700 text-sm font-medium leading-normal">3:00 PM</p></div>
+</label>
+</div>
+</div>
+</div>
+<div class="flex px-4 py-6 justify-end mt-8 border-t border-gray-200">
+<button class="flex items-center justify-center gap-2 min-w-[120px] max-w-[480px] cursor-pointer rounded-lg h-11 px-5 bg-[#b2d1e5] text-gray-800 hover:bg-[#a1c5dd] text-sm font-bold leading-normal tracking-[0.015em] transition-colors">
+<span class="truncate">Next Step</span>
+<span class="material-icons text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

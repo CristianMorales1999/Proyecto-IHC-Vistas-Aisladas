@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B600%3B700&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>HealthPlus - Confirm Appointment</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    .radio-custom:checked {
+      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+      border-color: #86A9C3;background-color: #B2D1E5;
+    }
+    .file-upload-button {
+      transition: background-color 0.2s ease-in-out;
+    }
+    .file-upload-button:hover {
+      background-color: #A0C4DB;}
+  </style>
+</head>
+<body class="bg-gray-100" style="font-family: Lexend, 'Noto Sans', sans-serif;">
+<div class="relative flex min-h-screen flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 bg-white px-6 sm:px-10 py-4 shadow-sm">
+<div class="flex items-center gap-4 text-slate-800">
+<div class="size-7 text-[#86A9C3]">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-slate-800 text-xl font-bold tracking-tight">HealthPlus</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-700 hover:text-[#86A9C3] text-sm font-medium" href="#">Find a Doctor</a>
+<a class="text-slate-700 hover:text-[#86A9C3] text-sm font-medium" href="#">Specialties</a>
+<a class="text-slate-700 hover:text-[#86A9C3] text-sm font-medium" href="#">Departments</a>
+</nav>
+<div class="flex items-center gap-4">
+<button aria-label="Notifications" class="flex cursor-pointer items-center justify-center rounded-full h-10 w-10 bg-gray-100 hover:bg-gray-200 text-slate-700">
+<div class="text-slate-700" data-icon="Bell" data-size="20px" data-weight="regular">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M221.8,175.94C216.25,166.38,208,139.33,208,104a80,80,0,1,0-160,0c0,35.34-8.26,62.38-13.81,71.94A16,16,0,0,0,48,200H88.81a40,40,0,0,0,78.38,0H208a16,16,0,0,0,13.8-24.06ZM128,216a24,24,0,0,1-22.62-16h45.24A24,24,0,0,1,128,216ZM48,184c7.7-13.24,16-43.92,16-80a64,64,0,1,1,128,0c0,36.05,8.28,66.73,16,80Z"></path>
+</svg>
+</div>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-gray-200" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUAEX80Jv6dx1Op6abYf68cWvKnbZ7qVqIMhvXrNsQpk3f3Fl4Ot-YXcQYLINdPvzEN-U9umODr20S2NsJc0mh7eyHPJ_0hueG3ZLFH_thepv9HSvrg3UvCf6uhxLwxtPOU5mVcsOw4-qTmjoHDzYgH5h4mFW30qWz5mImXpg8VHkeJMUL1Tivpv6_5cM0oCvRYhN7veEZWphD0usOIE2W1rsooYCFELwGmaJH7GoPel24ahHG-8ih77jRnvqoOViNnryDzqNPe54q");'></div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-8 px-4 sm:px-6 lg:px-8">
+<div class="w-full max-w-2xl space-y-8">
+<div class="bg-white shadow-xl rounded-lg p-6 md:p-10">
+<div class="flex flex-wrap items-center gap-x-2 gap-y-1 pb-6 text-sm text-gray-500">
+<a class="hover:text-[#86A9C3]" href="#">Book Appointment</a>
+<span>/</span>
+<a class="hover:text-[#86A9C3]" href="#">Select Date &amp; Time</a>
+<span>/</span>
+<span class="font-medium text-slate-700">Confirm &amp; Pay</span>
+</div>
+<h2 class="text-2xl sm:text-3xl font-bold text-slate-800 mb-8 text-center sm:text-left">
+              Confirm and Make Payment
+            </h2>
+<section class="mb-8">
+<h3 class="text-xl font-semibold text-slate-700 mb-4 border-b pb-2">Appointment Summary</h3>
+<div class="space-y-4 text-sm">
+<div class="grid grid-cols-3 gap-2">
+<p class="text-gray-600 font-medium">Doctor:</p>
+<p class="col-span-2 text-slate-800">Dr. Amelia Harper</p>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<p class="text-gray-600 font-medium">Specialty:</p>
+<p class="col-span-2 text-slate-800">Cardiology</p>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<p class="text-gray-600 font-medium">Date:</p>
+<p class="col-span-2 text-slate-800">July 20, 2024</p>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<p class="text-gray-600 font-medium">Time:</p>
+<p class="col-span-2 text-slate-800">10:00 AM</p>
+</div>
+</div>
+</section>
+<section>
+<h3 class="text-xl font-semibold text-slate-700 mb-6 border-b pb-2">Payment Method</h3>
+<div class="space-y-4">
+<label class="flex items-center gap-3 rounded-lg border border-gray-300 p-4 hover:border-[#86A9C3] transition-colors cursor-pointer has-[:checked]:border-[#86A9C3] has-[:checked]:bg-[#B2D1E5]/10">
+<input checked="" class="radio-custom h-5 w-5 border-2 border-gray-300 focus:ring-2 focus:ring-[#86A9C3] focus:ring-offset-1" name="paymentMethod" type="radio"/>
+<span class="text-slate-700 font-medium">Pay Online</span>
+</label>
+<label class="flex items-center gap-3 rounded-lg border border-gray-300 p-4 hover:border-[#86A9C3] transition-colors cursor-pointer has-[:checked]:border-[#86A9C3] has-[:checked]:bg-[#B2D1E5]/10">
+<input class="radio-custom h-5 w-5 border-2 border-gray-300 focus:ring-2 focus:ring-[#86A9C3] focus:ring-offset-1" name="paymentMethod" type="radio"/>
+<span class="text-slate-700 font-medium">Pay In-Clinic</span>
+</label>
+<label class="flex items-center gap-3 rounded-lg border border-gray-300 p-4 hover:border-[#86A9C3] transition-colors cursor-pointer has-[:checked]:border-[#86A9C3] has-[:checked]:bg-[#B2D1E5]/10">
+<input class="radio-custom h-5 w-5 border-2 border-gray-300 focus:ring-2 focus:ring-[#86A9C3] focus:ring-offset-1" id="uploadProofRadio" name="paymentMethod" type="radio"/>
+<span class="text-slate-700 font-medium">Upload Payment Proof</span>
+</label>
+</div>
+</section>
+<div class="mt-6 hidden" id="uploadSection">
+<label class="block text-sm font-medium text-slate-700 mb-2" for="paymentProof">Upload Payment Proof</label>
+<div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+<div class="space-y-1 text-center">
+<svg aria-hidden="true" class="mx-auto h-12 w-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 48 48">
+<path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<div class="flex text-sm text-gray-600">
+<label class="relative cursor-pointer bg-white rounded-md font-medium text-[#86A9C3] hover:text-[#6A8FAF] focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-[#86A9C3]" for="paymentProofInput">
+<span>Upload a file</span>
+<input class="sr-only" id="paymentProofInput" name="paymentProofInput" type="file"/>
+</label>
+<p class="pl-1">or drag and drop</p>
+</div>
+<p class="text-xs text-gray-500">PNG, JPG, PDF up to 10MB</p>
+</div>
+</div>
+</div>
+<div class="mt-10 pt-6 border-t border-gray-200">
+<button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-base font-semibold text-white bg-[#B2D1E5] hover:bg-[#A0C4DB] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#86A9C3] transition-colors" type="submit">
+                Confirm Booking
+              </button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<script>
+    const uploadProofRadio = document.getElementById('uploadProofRadio');
+    const uploadSection = document.getElementById('uploadSection');
+    const paymentRadios = document.querySelectorAll('input[name="paymentMethod"]');
+    paymentRadios.forEach(radio => {
+      radio.addEventListener('change', function() {
+        if (uploadProofRadio.checked) {
+          uploadSection.classList.remove('hidden');
+        } else {
+          uploadSection.classList.add('hidden');
+        }
+      });
+    });
+    // Initialize visibility based on pre-checked state (if any)
+    if (uploadProofRadio.checked) {
+      uploadSection.classList.remove('hidden');
+    }
+  </script>
+
+</body></html>

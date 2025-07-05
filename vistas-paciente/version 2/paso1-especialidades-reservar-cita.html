@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B600%3B700%3B800%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<title>SaludIntegra - Book Appointment</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: 'liga';
+        }
+        .selected-specialty {
+            outline: 2px solid #2563eb;box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+        }.sidebar-open .sidebar {
+            transform: translateX(0);
+        }
+        .sidebar-closed .sidebar {
+            transform: translateX(-100%);
+        }
+        .sidebar {
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden" id="app-container">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-4 sm:px-6 lg:px-10 py-3 bg-white shadow-sm sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<button class="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600" id="hamburger-menu">
+<span class="material-icons">menu</span>
+</button>
+<div class="flex items-center gap-2 text-blue-700">
+<span class="material-icons text-3xl">health_and_safety</span>
+<h2 class="text-xl font-bold tracking-tight">SaludIntegra</h2>
+</div>
+<div class="hidden lg:block ml-4 text-lg font-semibold text-gray-600">Book Appointment - Step 1</div>
+<div class="lg:hidden ml-auto text-base font-semibold text-gray-600">Book Appointment - Step 1</div>
+</div>
+<div class="flex items-center gap-3 sm:gap-4">
+<button class="relative flex items-center justify-center rounded-full h-10 w-10 text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600">
+<span class="material-icons">notifications</span>
+<span class="absolute top-1 right-1 h-2.5 w-2.5 rounded-full bg-red-500 border-2 border-white"></span>
+</button>
+<div class="relative">
+<button class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-transparent hover:border-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600" id="profileDropdownButton" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoNZzc9gci_9cjdDg4rVbZ6Wf20TEJod9P3dhIFjFnL5AvxKo96FtYgsr7_NusV-ETfzYj9mYMWz-B6A8yMpsQWcLb8E0-RUvmTTVEbsI2lI2xASsYPL0wF0OQ1kDNJa1di6HFayGMRYO7eLxBRwYsp_mf22gcvXX2Lzw7n2hyuvEHFOXV5BkC9Q1u5xnN_Iz__RTKEehjuBPkcAsWi7FeA7gcaHfnm8Yn8Y7oaSWFYt0CvYCoG7KgffKNafzvnALl5Ent-uxRbHUu");'></button>
+<div class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 ring-1 ring-black ring-opacity-5" id="profileDropdownMenu">
+<a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="#">My Profile</a>
+<a class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" href="#">Settings</a>
+<a class="block px-4 py-2 text-sm text-red-600 hover:bg-red-50" href="#">Logout</a>
+</div>
+</div>
+</div>
+</header>
+<div class="flex flex-1">
+<aside class="sidebar fixed inset-y-0 left-0 z-40 lg:relative lg:translate-x-0 flex flex-col w-64 bg-white border-r border-gray-200 p-4 shadow-sm sidebar-closed lg:flex pt-16 lg:pt-4" id="sidebar">
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150" href="#">
+<span class="material-icons">home</span>
+<span class="text-sm font-medium">Home</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150" href="#">
+<span class="material-icons">person_outline</span>
+<span class="text-sm font-medium">My Profile</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-blue-700 bg-blue-50 border border-blue-200 rounded-lg font-semibold shadow-sm transition-colors duration-150" href="#">
+<span class="material-icons">calendar_today</span>
+<span class="text-sm">Book Appointment</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150" href="#">
+<span class="material-icons">event_note</span>
+<span class="text-sm font-medium">My Appointments</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150" href="#">
+<span class="material-icons">medical_services</span>
+<span class="text-sm font-medium">Medical History</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150" href="#">
+<span class="material-icons">notifications_none</span>
+<span class="text-sm font-medium">Notifications</span>
+</a>
+</nav>
+<div class="mt-auto">
+<a class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-red-600 rounded-lg transition-colors duration-150" href="#">
+<span class="material-icons">logout</span>
+<span class="text-sm font-medium">Logout</span>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-4 sm:p-6 lg:p-8 bg-gray-50 lg:ml-0">
+<div class="max-w-4xl mx-auto">
+<h1 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Book Medical Appointment</h1>
+<h2 class="text-lg sm:text-xl font-semibold text-blue-600 mb-6">Step 1 of 4: Select a Specialty</h2>
+<div class="mb-8">
+<div class="overflow-hidden rounded-full bg-gray-200">
+<div class="h-2 rounded-full bg-blue-600" style="width: 25%"></div>
+</div>
+<div class="mt-2 grid grid-cols-4 gap-2 text-xs text-gray-500">
+<span class="text-center font-medium text-blue-600">Specialty</span>
+<span class="text-center">Physician</span>
+<span class="text-center">Date &amp; Time</span>
+<span class="text-center">Confirm</span>
+</div>
+</div>
+<div class="mb-6">
+<label class="sr-only" for="search-specialty">Search specialty</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-icons text-gray-400">search</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" id="search-specialty" name="search-specialty" placeholder="Search specialty (e.g., Cardiology, Pediatrics...)" type="search"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6" id="specialty-grid">
+<div aria-checked="false" class="specialty-card group bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2 border-transparent focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500" data-specialty-name="Cardiology" role="radio" tabindex="0">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-icons text-3xl text-blue-600">favorite_border</span>
+<h3 class="text-lg font-semibold text-gray-800 group-hover:text-blue-700">Cardiology</h3>
+</div>
+<p class="text-sm text-gray-600">Specializes in heart conditions and the cardiovascular system. We offer advanced diagnostics and treatments.</p>
+</div>
+<div aria-checked="false" class="specialty-card group bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2 border-transparent focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500" data-specialty-name="Pediatrics" role="radio" tabindex="0">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-icons text-3xl text-blue-600">child_care</span>
+<h3 class="text-lg font-semibold text-gray-800 group-hover:text-blue-700">Pediatrics</h3>
+</div>
+<p class="text-sm text-gray-600">Comprehensive care for infants, children, and adolescents. Focus on well-being and development.</p>
+</div>
+<div aria-checked="false" class="specialty-card group bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2 border-transparent focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500" data-specialty-name="Dermatology" role="radio" tabindex="0">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-icons text-3xl text-blue-600">spa</span>
+<h3 class="text-lg font-semibold text-gray-800 group-hover:text-blue-700">Dermatology</h3>
+</div>
+<p class="text-sm text-gray-600">Diagnosis and treatment of skin, hair, and nail conditions. Cosmetic and medical dermatology.</p>
+</div>
+<div aria-checked="false" class="specialty-card group bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2 border-transparent focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500" data-specialty-name="Neurology" role="radio" tabindex="0">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-icons text-3xl text-blue-600">psychology</span>
+<h3 class="text-lg font-semibold text-gray-800 group-hover:text-blue-700">Neurology</h3>
+</div>
+<p class="text-sm text-gray-600">Care for disorders of the nervous system, including the brain, spinal cord, and nerves.</p>
+</div>
+<div aria-checked="false" class="specialty-card group bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2 border-transparent focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500" data-specialty-name="Orthopedics" role="radio" tabindex="0">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-icons text-3xl text-blue-600">healing</span>
+<h3 class="text-lg font-semibold text-gray-800 group-hover:text-blue-700">Orthopedics</h3>
+</div>
+<p class="text-sm text-gray-600">Treatment of musculoskeletal system issues, including bones, joints, ligaments, and tendons.</p>
+</div>
+<div aria-checked="false" class="specialty-card group bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2 border-transparent focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500" data-specialty-name="Oncology" role="radio" tabindex="0">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-icons text-3xl text-blue-600">biotech</span>
+<h3 class="text-lg font-semibold text-gray-800 group-hover:text-blue-700">Oncology</h3>
+</div>
+<p class="text-sm text-gray-600">Comprehensive cancer care, from diagnosis and treatment to survivorship support.</p>
+</div>
+</div>
+<div class="mt-8 flex flex-col sm:flex-row justify-end gap-3">
+<button class="w-full sm:w-auto px-6 py-3 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-150" type="button">
+                            Cancel
+                        </button>
+<button class="w-full sm:w-auto px-6 py-3 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors duration-150" disabled="" id="nextButton" type="button">
+                            Next
+                        </button>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+<script>
+    // Sidebar toggle
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const sidebar = document.getElementById('sidebar');
+    const appContainer = document.getElementById('app-container');
+    hamburgerMenu.addEventListener('click', () => {
+        sidebar.classList.toggle('sidebar-closed');
+        sidebar.classList.toggle('sidebar-open');
+    });
+    // Profile dropdown toggle
+    const profileDropdownButton = document.getElementById('profileDropdownButton');
+    const profileDropdownMenu = document.getElementById('profileDropdownMenu');
+    profileDropdownButton.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevents the document click listener from immediately closing the dropdown
+        profileDropdownMenu.classList.toggle('hidden');
+    });
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (event) => {
+        if (!profileDropdownButton.contains(event.target) && !profileDropdownMenu.contains(event.target)) {
+            profileDropdownMenu.classList.add('hidden');
+        }
+    });
+    // Specialty selection and Next button enabling/disabling
+    const specialtyCards = document.querySelectorAll('.specialty-card');
+    const nextButton = document.getElementById('nextButton');
+    const searchInput = document.getElementById('search-specialty');
+    const specialtyGrid = document.getElementById('specialty-grid');
+    specialtyCards.forEach(card => {
+        card.addEventListener('click', () => {
+            // Remove selection from all other cards
+            specialtyCards.forEach(otherCard => {
+                if (otherCard !== card) {
+                    otherCard.classList.remove('selected-specialty');
+                    otherCard.setAttribute('aria-checked', 'false');
+                }
+            });
+            // Toggle selection for the clicked card
+            card.classList.toggle('selected-specialty');
+            const isSelected = card.classList.contains('selected-specialty');
+            card.setAttribute('aria-checked', isSelected.toString());
+            // Enable/disable Next button
+            nextButton.disabled = !isSelected;
+        });
+        // Accessibility: Allow selection with Enter/Space key
+        card.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault(); // Prevent scrolling on Space
+                card.click(); // Simulate a click
+            }
+        });
+    });
+    // Dynamic search/filter for specialties
+    searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.toLowerCase();
+        let visibleCards = 0;
+        specialtyCards.forEach(card => {
+            const specialtyName = card.dataset.specialtyName.toLowerCase();
+            const specialtyDescription = card.querySelector('p').textContent.toLowerCase();
+            if (specialtyName.includes(searchTerm) || specialtyDescription.includes(searchTerm)) {
+                card.style.display = 'block';
+                visibleCards++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        // If no cards are visible after filtering, you might want to display a message (optional)
+        // For example, by adding a specific element to the HTML:
+        // const noResultsMessage = document.getElementById('no-results-message');
+        // if (noResultsMessage) {
+        //   noResultsMessage.style.display = visibleCards === 0 ? 'block' : 'none';
+        // }
+    });
+</script>
+
+</body></html>

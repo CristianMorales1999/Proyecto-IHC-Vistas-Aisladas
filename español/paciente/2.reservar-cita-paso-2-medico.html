@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+    <meta charset="utf-8" />
+    <link crossorigin href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B600%3B700%3B800%3B900"
+      onload="this.rel='stylesheet'" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" />
+    <title>SaludIntegra - Reservar Cita - Seleccionar Médico</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script
+      src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+    .material-icons {
+      font-family: 'Material Icons';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 24px;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      -moz-osx-font-smoothing: grayscale;
+      font-feature-settings: 'liga';
+    }
+    .selected-doctor {
+      outline: 2px solid #1e40af;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+      border-color: #1e40af;
+    }
+  </style>
+  </head>
+  <body class="bg-gray-50"
+    style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+    <div
+      class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 px-4 sm:px-6 lg:px-10 py-3 bg-white shadow-sm">
+          <div class="flex items-center gap-4">
+            <button
+              class="lg:hidden p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-[#1e40af]">
+              <span class="material-icons">menu</span>
+            </button>
+            <div class="flex items-center gap-2 text-blue-700">
+              <span class="material-icons text-3xl">health_and_safety</span>
+              <h2 class="text-xl font-bold tracking-tight">SaludIntegra</h2>
+            </div>
+            <div
+              class="hidden lg:block ml-4 text-lg font-semibold text-gray-600">Reservar
+              Cita - Paso 2</div>
+          </div>
+          <div class="flex items-center gap-3 sm:gap-4">
+            <button
+              class="relative flex items-center justify-center rounded-full h-10 w-10 text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1e40af]">
+              <span class="material-icons">notifications</span>
+              <span
+                class="absolute top-1 right-1 h-2.5 w-2.5 rounded-full bg-red-500 border-2 border-white"></span>
+            </button>
+            <div class="relative">
+              <button
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-transparent hover:border-[#1e40af] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1e40af]"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCoNZzc9gci_9cjdDg4rVbZ6Wf20TEJod9P3dhIFjFnL5AvxKo96FtYgsr7_NusV-ETfzYj9mYMWz-B6A8yMpsQWcLb8E0-RUvmTTVEbsI2lI2xASsYPL0wF0OQ1kDNJa1di6HFayGMRYO7eLxBRwYsp_mf22gcvXX2Lzw7n2hyuvEHFOXV5BkC9Q1u5xnN_Iz__RTKEehjuBPkcAsWi7FeA7gcaHfnm8Yn8Y7oaSWFYt0CvYCoG7KgffKNafzvnALl5Ent-uxRbHUu");'></button>
+            </div>
+          </div>
+        </header>
+        <div class="flex flex-1">
+          <aside
+            class="hidden lg:flex flex-col w-64 bg-white border-r border-gray-200 p-4 shadow-sm">
+            <nav class="flex flex-col gap-2 mt-4">
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150"
+                href="1.dashboard-paciente.html">
+                <span class="material-icons">dashboard</span>
+                <span class="text-sm font-medium">Panel</span>
+              </a>
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-blue-700 bg-blue-50 border border-blue-200 rounded-lg font-semibold shadow-sm transition-colors duration-150"
+                href="2.recervar-cita-paso-1-especialidad.html">
+                <span class="material-icons">add_circle</span>
+                <span class="text-sm">Reservar Cita</span>
+              </a>
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150"
+                href="#">
+                <span class="material-icons">chat</span>
+                <span class="text-sm font-medium">Mensajes</span>
+              </a>
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150"
+                href="#">
+                <span class="material-icons">folder</span>
+                <span class="text-sm font-medium">Documentos</span>
+              </a>
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-blue-600 rounded-lg transition-colors duration-150"
+                href="1.2.dashboard-paciente-mi-perfil.html">
+                <span class="material-icons">person</span>
+                <span class="text-sm font-medium">Perfil</span>
+              </a>
+            </nav>
+            <div class="mt-auto">
+              <a
+                class="flex items-center gap-3 px-3 py-2.5 text-gray-700 hover:bg-gray-100 hover:text-red-600 rounded-lg transition-colors duration-150"
+                href="../1.login.html">
+                <span class="material-icons">logout</span>
+                <span class="text-sm font-medium">Cerrar Sesión</span>
+              </a>
+            </div>
+          </aside>
+          <main class="flex-1 p-4 sm:p-6 lg:p-8 bg-gray-50">
+            <div class="max-w-4xl mx-auto">
+              <h1
+                class="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Reservar
+                Cita Médica</h1>
+              <h2
+                class="text-lg sm:text-xl font-semibold text-blue-600 mb-6">Paso
+                2 de 4: Seleccione un Médico</h2>
+              <div class="mb-8">
+                <div class="overflow-hidden rounded-full bg-gray-200">
+                  <div class="h-2 rounded-full bg-blue-600"
+                    style="width: 50%"></div>
+                </div>
+                <div class="mt-2 flex justify-between text-xs text-gray-500">
+                  <span class="font-semibold text-blue-600">Especialidad</span>
+                  <span class="font-semibold text-blue-600">Médico</span>
+                  <span>Fecha y Hora</span>
+                  <span>Confirmar</span>
+                </div>
+              </div>
+              <div
+                class="mb-6 bg-blue-50 p-4 rounded-lg border border-blue-200">
+                <p class="text-sm text-gray-700">Especialidad seleccionada:</p>
+                <p class="text-lg font-semibold text-blue-700">Cardiología</p>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div aria-checked="false"
+                  class="group bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2 border-transparent focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500"
+                  onclick="this.classList.toggle('selected-doctor'); this.setAttribute('aria-checked', this.classList.contains('selected-doctor')); document.querySelectorAll('.selected-doctor').forEach(el =&gt; { if(el !== this) { el.classList.remove('selected-doctor'); el.setAttribute('aria-checked', 'false');}}); document.getElementById('nextButton').disabled = !this.classList.contains('selected-doctor');"
+                  role="radio" tabindex="0">
+                  <div class="flex items-start gap-4">
+                    <img alt="Foto del Dr. Carlos Ramirez"
+                      class="h-16 w-16 rounded-full object-cover"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0s-XtSRrz7J-WFEY3_NULTxMfRv5FoR73yZ6HHnvWnFRsAhGVnu36c6-5K-4Zr4TiqAs9q609QRUM9sjUN3DQJOLWtKXenRCq44DK2XQkScTlQVlGP-fmpfkyGe3b3tQGlAcT1db7ZT0UWDBj0fXa0_saEEYlC7hhVATVSWzcgGbKB9R9ZKOAyDBw8NgMDLDwN51hoTSYU-BR_jpZJ81qG3-RLoGjSHCPuwHZ_IXOHNj0EwyOVe5hStycrRWJ8NQhuvyxlO4ZJGja" />
+                    <div>
+                      <h3
+                        class="text-lg font-semibold text-gray-800 group-hover:text-blue-700">Dr.
+                        Carlos Ramirez</h3>
+                      <p class="text-sm text-gray-600 mt-1">Cardiólogo con 15
+                        años de experiencia en enfermedades coronarias y
+                        arritmias. Miembro de la Sociedad Española de
+                        Cardiología.</p>
+                    </div>
+                  </div>
+                </div>
+                <div aria-checked="false"
+                  class="group bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2 border-transparent focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500"
+                  onclick="this.classList.toggle('selected-doctor'); this.setAttribute('aria-checked', this.classList.contains('selected-doctor')); document.querySelectorAll('.selected-doctor').forEach(el =&gt; { if(el !== this) { el.classList.remove('selected-doctor'); el.setAttribute('aria-checked', 'false');}}); document.getElementById('nextButton').disabled = !this.classList.contains('selected-doctor');"
+                  role="radio" tabindex="0">
+                  <div class="flex items-start gap-4">
+                    <img alt="Foto de la Dra. Ana Torres"
+                      class="h-16 w-16 rounded-full object-cover"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlgdooKPLTm-2Ii5SBtbk6zcIe4JGVbA9z-iACWwjVBnDiHBTxRIDIYHlf-8TQj0iuhesqR_rSYuExPGk6Jh2gPo-8B6sDeDXOxL8hp-kMJWy4N6fVlsxrOMn3i1QDvNuEF_lDx0WE8b8XXJr1iLHUy8y4df9SzxkNs4aOxPTwaLeToBsJNCTh9xE2koAW2kbF6hBw8hEtv-7ewnHQXlYnOOlVl3L2M_Ewv6GEuFZpJlB3diyf-2aT55cnqDxbwKg2wSWjQtgYEsgI" />
+                    <div>
+                      <h3
+                        class="text-lg font-semibold text-gray-800 group-hover:text-blue-700">Dra.
+                        Ana Torres</h3>
+                      <p class="text-sm text-gray-600 mt-1">Especialista en
+                        cardiología pediátrica y cardiopatías congénitas. Amplia
+                        experiencia en ecocardiografía.</p>
+                    </div>
+                  </div>
+                </div>
+                <div aria-checked="false"
+                  class="group bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 cursor-pointer border-2 border-transparent focus-within:border-blue-500 focus-within:ring-2 focus-within:ring-blue-500"
+                  onclick="this.classList.toggle('selected-doctor'); this.setAttribute('aria-checked', this.classList.contains('selected-doctor')); document.querySelectorAll('.selected-doctor').forEach(el =&gt; { if(el !== this) { el.classList.remove('selected-doctor'); el.setAttribute('aria-checked', 'false');}}); document.getElementById('nextButton').disabled = !this.classList.contains('selected-doctor');"
+                  role="radio" tabindex="0">
+                  <div class="flex items-start gap-4">
+                    <span
+                      class="material-icons text-5xl text-gray-400 bg-gray-100 rounded-full p-2">person_outline</span>
+                    <div>
+                      <h3
+                        class="text-lg font-semibold text-gray-800 group-hover:text-blue-700">Dr.
+                        Javier López</h3>
+                      <p class="text-sm text-gray-600 mt-1">Cardiólogo
+                        intervencionista. Experto en cateterismos y
+                        angioplastias. Más de 10 años de práctica clínica.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mt-8 flex flex-col sm:flex-row justify-between items-center gap-3">
+                <button
+                  class="w-full sm:w-auto px-6 py-3 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-150"
+                  type="button">
+                  Anterior
+                </button>
+                <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                  <button
+                    class="w-full sm:w-auto px-6 py-3 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-150"
+                    type="button">
+                    Cancelar
+                  </button>
+                  <button
+                    class="w-full sm:w-auto px-6 py-3 border border-transparent rounded-lg text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:bg-gray-300 disabled:cursor-not-allowed transition-colors duration-150"
+                    disabled id="nextButton" type="button">
+                    Siguiente
+                  </button>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+
+  </body></html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8" />
+    <link crossorigin href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+      onload="this.rel='stylesheet'" rel="stylesheet" />
+    <title>HealthPlus - Hospital Management</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script
+      src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet" />
+    <style>
+      .material-icons {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        font-size: 24px;display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;-webkit-font-smoothing: antialiased;text-rendering: optimizeLegibility;-moz-osx-font-smoothing: grayscale;font-feature-settings: 'liga';
+      }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-900"
+    style='font-family: Lexend, "Noto Sans", sans-serif;'>
+    <div
+      class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="sticky top-0 z-50 bg-white shadow-md">
+          <div
+            class="container mx-auto flex items-center justify-between whitespace-nowrap px-6 py-4">
+            <div class="flex items-center gap-3 text-blue-600">
+              <span class="material-icons text-3xl">local_hospital</span>
+              <h1 class="text-2xl font-bold tracking-tight">HealthPlus</h1>
+            </div>
+            <nav class="hidden md:flex items-center gap-6">
+              <a
+                class="text-slate-700 hover:text-blue-600 text-sm font-medium transition-colors"
+                href="#">Services</a>
+              <a
+                class="text-slate-700 hover:text-blue-600 text-sm font-medium transition-colors"
+                href="#">Specialties</a>
+              <a
+                class="text-slate-700 hover:text-blue-600 text-sm font-medium transition-colors"
+                href="#">About Us</a>
+              <a
+                class="text-slate-700 hover:text-blue-600 text-sm font-medium transition-colors"
+                href="#">Contact</a>
+            </nav>
+            <div class="flex items-center gap-3">
+              <button
+                class="flex min-w-[90px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-blue-600 text-white text-sm font-semibold leading-normal tracking-wide shadow-sm hover:bg-blue-700 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+                <a href="login.html">Login</a>
+                <!-- <span class="truncate">Login</span> -->
+              </button>
+              <button
+                class="flex min-w-[90px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md h-10 px-4 bg-slate-200 text-slate-800 text-sm font-semibold leading-normal tracking-wide shadow-sm hover:bg-slate-300 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+                <span class="truncate">Register</span>
+              </button>
+              <button class="md:hidden text-slate-700 hover:text-blue-600">
+                <span class="material-icons">menu</span>
+              </button>
+            </div>
+          </div>
+        </header>
+        <main class="flex-1">
+          <section class="relative">
+            <div
+              class="min-h-[500px] md:min-h-[600px] bg-cover bg-center flex items-center justify-center text-center"
+              style='background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuByo1NDMlFuCTvtKmqwBa6uKKHLqlR814nuAnnehvX1kFkDOW2qudBhOlSPjZAXCNYbd80KUWbpxDtVSeM79LGJw7ViUZC_VUXIXZyIJ4J9H9TIjbQyG-bLNXmiLgvlOugbaqbgvDphzFckHBbGHEqaHrEMy7fWbQm1XApLp2SzVw2pVFzGx_PGdTKr4VsHEtV26CIc5Q0jdqlAlq5DtswF5Qws9Bu8niI28J2VcfX08C1sf8FmYac_SaTxk1Jzd1l5S4Ar_nJTaOx4");'>
+              <div class="px-4 py-16 md:py-24 max-w-3xl mx-auto">
+                <h1
+                  class="text-white text-4xl md:text-6xl font-black leading-tight tracking-tighter mb-6">
+                  Your Health, Our Priority
+                </h1>
+                <h2
+                  class="text-slate-200 text-lg md:text-xl font-normal leading-relaxed mb-10">
+                  Providing exceptional care with compassion and expertise.
+                  Access world-class medical services and experienced
+                  professionals.
+                </h2>
+                <button
+                  class="flex min-w-[180px] max-w-[480px] mx-auto cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 md:h-14 md:px-8 bg-blue-600 text-white text-base md:text-lg font-bold leading-normal tracking-wide shadow-lg hover:bg-blue-700 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500">
+                  <span class="truncate">Book an Appointment</span>
+                </button>
+              </div>
+            </div>
+          </section>
+          <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+              <h2
+                class="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-4 leading-tight tracking-tight">Featured
+                Services</h2>
+              <p
+                class="text-center text-slate-600 mb-12 md:mb-16 max-w-2xl mx-auto">
+                We offer a wide range of specialized medical services to cater
+                to your health needs.
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                  class="group flex flex-col bg-slate-50 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                  <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBgY0MP6ZlOKPFpUu87kVEsO6uUNZLUBvHLo5uSp2DrZ-JyP60u4WmvnB78QjOeaf_a7Pb6nFBlkr9KRptvdliYe5AW7In6_NtIlCbnZraobeoyXe9tcL4YGYbgkowZb8gzxTsTgXCduIqkswQxjgPZqhztzD8raT88Wr7xQZybCBpDbziPHHdhCbBJKD-eIH7Tjg2lqRYPV9sp7SeJOj1K3RtweWj13BaqY1l5RFOrdPghGdvTNheUt0qJh-scCHL8Bf8n0_j6NsGQ");'></div>
+                  <div class="p-6 flex-grow">
+                    <h3
+                      class="text-xl font-semibold text-slate-800 mb-2">Cardiology</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Expert
+                      care for heart conditions, diagnostics, and treatment
+                      plans.</p>
+                  </div>
+                  <a
+                    class="block bg-blue-50 text-blue-600 p-4 text-center font-medium hover:bg-blue-100 transition-colors"
+                    href="#">Learn More</a>
+                </div>
+                <div
+                  class="group flex flex-col bg-slate-50 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                  <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCpGKz3j9RxBb_S_-fI_dTmfv-xHRte6BH2RBmcEKHPXHhoDrNT4YS5GZVc0l1Jo4RvogW53FXulPMEK13134rbCb3Jr-qIxeUvCOHdPBJUEaLQcNvBHc4yDvc3yXxooG8Tpj-ufg-UwPvoSZWvEFcZjpfkae8yBAw6ZQiY-MqQ9WAqwOyV0VVr0NfVqFBeYOWvnvd32itWbwAKE12gEbT9ccQaxB8B6buESiEppMBZr4a-dFJnUrjyLLxBPegROaPIuQYbUZdts0d");'></div>
+                  <div class="p-6 flex-grow">
+                    <h3
+                      class="text-xl font-semibold text-slate-800 mb-2">Neurology</h3>
+                    <p
+                      class="text-slate-600 text-sm leading-relaxed">Specialized
+                      treatment for neurological disorders and conditions.</p>
+                  </div>
+                  <a
+                    class="block bg-blue-50 text-blue-600 p-4 text-center font-medium hover:bg-blue-100 transition-colors"
+                    href="#">Learn More</a>
+                </div>
+                <div
+                  class="group flex flex-col bg-slate-50 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                  <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCf3IwSwCMjrYHB1zrLXW_p-gNpP0Fog3JION4_8ZCp3oYSet6Y7-5lzSRk7P6dPpzs3EUasYKlNT8Pao7mJvpExdx2Y6ZfshmpWbGiKLhmY9bOiH7wNuH0XKlgPAHxkfmdIO95a16yk4iKczgreHWQ7WYEiObw8ZP450NE9YZJ_wILDCukHgS_82dIZZqqe_ghSYkEMpyV7e9mGAhJW9nicy-FMaRvp_e6kwK-8LMn0TiMbrw8j6w0lIOZ8GmRi6WntBPyh921HLZl");'></div>
+                  <div class="p-6 flex-grow">
+                    <h3
+                      class="text-xl font-semibold text-slate-800 mb-2">Oncology</h3>
+                    <p
+                      class="text-slate-600 text-sm leading-relaxed">Comprehensive
+                      cancer care, support, and advanced therapies.</p>
+                  </div>
+                  <a
+                    class="block bg-blue-50 text-blue-600 p-4 text-center font-medium hover:bg-blue-100 transition-colors"
+                    href="#">Learn More</a>
+                </div>
+                <div
+                  class="group flex flex-col bg-slate-50 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                  <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkInaXcU6WdRft6VChRIRez285ZUfu6d46PrycdN7k_c6wxnts4MNYhdY8Dio39FwPimiFhuEwkQfUa_f1Ww7g2FvSvHIXNzSrbM8VIIV6UglQhKiVEnJbBy_FZ6x5b7eWWj9Mhm82dqJgPBDQRTYTem703GJnN--_xkz-6vlNwA47YriIJA4Pc2cGOcEW2d8HYUSiz6IAJOCBEiezt0KR-oGgNSsuSnsHThM3mZs8I6xZ56WtcBIOL1Gw0r4jEbe-V7PW17UB3-ha");'></div>
+                  <div class="p-6 flex-grow">
+                    <h3
+                      class="text-xl font-semibold text-slate-800 mb-2">Pediatrics</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Dedicated
+                      and compassionate care for children's health and
+                      well-being.</p>
+                  </div>
+                  <a
+                    class="block bg-blue-50 text-blue-600 p-4 text-center font-medium hover:bg-blue-100 transition-colors"
+                    href="#">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="py-16 md:py-24 bg-slate-100">
+            <div class="container mx-auto px-6">
+              <h2
+                class="text-3xl md:text-4xl font-bold text-slate-800 text-center mb-4 leading-tight tracking-tight">Explore
+                Our Specialties</h2>
+              <p
+                class="text-center text-slate-600 mb-12 md:mb-16 max-w-2xl mx-auto">
+                Discover the breadth of our medical expertise across various
+                specialized fields.
+              </p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div
+                  class="group flex flex-col bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                  <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBUqJfXKiMvkyqpu1i39hAO2QQ0Fr9Nzap83_Eznv_7VIWdWRVhfddN6PAWuETBGclSVLy_sC8WUeIywBw5VzhYHap6RZFzawWETP9iGzfR3gTnsiCfZpjom_XdLL2sHUI4umC0JC-h1SPCo77kL4_ewmWRhG1g4VtN3j7MhKLMdebGStauZt2ALaWA338eeUMhVEda8rUPZjdYmarhy_Krl6wXPtAiHXGSSxzDEkTubcGZ8qzBJTp8uMQ5pvW6frt2HUPkagbeEXOP");'></div>
+                  <div class="p-6 flex-grow">
+                    <h3
+                      class="text-xl font-semibold text-slate-800 mb-2">Orthopedics</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Advanced
+                      orthopedic treatments, surgery, and rehabilitation.</p>
+                  </div>
+                  <a
+                    class="block bg-blue-50 text-blue-600 p-4 text-center font-medium hover:bg-blue-100 transition-colors"
+                    href="#">Learn More</a>
+                </div>
+                <div
+                  class="group flex flex-col bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                  <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD5rOmzXxUlYqLlGbVJSEzZS03cYQ4qhlbDD0th0D8eChmG27RnfDwWtfyuSOCM0y4khDcf7ttQcxJ1EPE1MiJW3xmyCZ3Nfx8OBvDXRRwTAnjbnKe_IMbfveuPjEHXtUILFyrcKMnjwSqrJfVMyu7YMabk6l2hYszpMkOKicEFcjG9vOznfMFUYyRlSte3K4bJ6A0hJ2JOG4P4mhriQTgyRkJvX_yJox8l2Ynq1lWYQZsiDZjY23cjJgsw7EDl4mXDqp4mHGlPQuV7");'></div>
+                  <div class="p-6 flex-grow">
+                    <h3
+                      class="text-xl font-semibold text-slate-800 mb-2">Dermatology</h3>
+                    <p
+                      class="text-slate-600 text-sm leading-relaxed">Comprehensive
+                      skin care, diagnosis, and advanced treatments.</p>
+                  </div>
+                  <a
+                    class="block bg-blue-50 text-blue-600 p-4 text-center font-medium hover:bg-blue-100 transition-colors"
+                    href="#">Learn More</a>
+                </div>
+                <div
+                  class="group flex flex-col bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                  <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqV8_qZNLg1MsKrDQPuS3DUtX057JHCVWdaM26-0JrYdx61Z9MlrJAIu9_PBOiIlfHALjBGT8MsnxJzVIf__EbfYwVy_rCTZ1C0PVZ5yzCPsAPrq-tLj0uh2zjJyKHf2p_scTXHwCx4wC_iJHaEt5XEkvaw4ezQUQ6kzPWmNjvt09jE_oM6g1ag6oi4wZ0v4O_hnNWRJ_KIkrXSyC6udfAdG6kw7bppO2cSTuTQ7wHsHWpSg52nmHChYFLhuOcb-ghSqHsCMc1pUax");'></div>
+                  <div class="p-6 flex-grow">
+                    <h3
+                      class="text-xl font-semibold text-slate-800 mb-2">Gastroenterology</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Expert
+                      care for digestive system disorders and conditions.</p>
+                  </div>
+                  <a
+                    class="block bg-blue-50 text-blue-600 p-4 text-center font-medium hover:bg-blue-100 transition-colors"
+                    href="#">Learn More</a>
+                </div>
+                <div
+                  class="group flex flex-col bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                  <div class="w-full h-48 bg-center bg-no-repeat bg-cover"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAPOcPibX0mdbbDnWtdGeL_DYCkOBII0_q50AkmuZFRg6NhxMGZ7vC5_Vqb9pfKwrFYJd5LnZ7D3k6VrbgA2RE8fyliBKgj8ngr06c0r20nv7jts-kqZ55tJHhBeR_kH1vO0xqZZOrEVsSVg8EbUna_IT-TW2iwhLCxTtPIIUwL4G5f1_Mb0jSWTbpP4lUk4QpxrDDdiz8VBV_t7Y7K2aZHV7ofWQEsf7h0tTfmxA8XAEV-75mihDqWpHeufPRJw6r0ljtZpvtqhKwa");'></div>
+                  <div class="p-6 flex-grow">
+                    <h3
+                      class="text-xl font-semibold text-slate-800 mb-2">Pulmonology</h3>
+                    <p
+                      class="text-slate-600 text-sm leading-relaxed">Specialized
+                      care for respiratory conditions and lung health.</p>
+                  </div>
+                  <a
+                    class="block bg-blue-50 text-blue-600 p-4 text-center font-medium hover:bg-blue-100 transition-colors"
+                    href="#">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer class="bg-slate-800 text-slate-300">
+          <div class="container mx-auto px-6 py-12 md:py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              <div>
+                <div class="flex items-center gap-3 text-blue-400 mb-4">
+                  <span class="material-icons text-3xl">local_hospital</span>
+                  <h2 class="text-xl font-bold">HealthPlus</h2>
+                </div>
+                <p class="text-sm leading-relaxed">123 Health St, Wellness City,
+                  HC 45678</p>
+                <p class="text-sm leading-relaxed">Phone: (123) 456-7890</p>
+                <p class="text-sm leading-relaxed">Email:
+                  info@healthplus.com</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Quick
+                  Links</h3>
+                <ul class="space-y-2">
+                  <li><a class="hover:text-blue-400 transition-colors text-sm"
+                      href="#">Find a Doctor</a></li>
+                  <li><a class="hover:text-blue-400 transition-colors text-sm"
+                      href="#">Book Appointment</a></li>
+                  <li><a class="hover:text-blue-400 transition-colors text-sm"
+                      href="#">Patient Portal</a></li>
+                  <li><a class="hover:text-blue-400 transition-colors text-sm"
+                      href="#">Our Blog</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-white mb-4">Connect With
+                  Us</h3>
+                <div class="flex space-x-4">
+                  <a
+                    class="text-slate-400 hover:text-blue-400 transition-colors"
+                    href="#">
+                    <svg aria-hidden="true" class="w-6 h-6" fill="currentColor"
+                      viewBox="0 0 24 24"><path clip-rule="evenodd"
+                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                        fill-rule="evenodd"></path></svg>
+                    <span class="sr-only">Facebook</span>
+                  </a>
+                  <a
+                    class="text-slate-400 hover:text-blue-400 transition-colors"
+                    href="#">
+                    <svg aria-hidden="true" class="w-6 h-6" fill="currentColor"
+                      viewBox="0 0 24 24"><path
+                        d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+                    <span class="sr-only">Twitter</span>
+                  </a>
+                  <a
+                    class="text-slate-400 hover:text-blue-400 transition-colors"
+                    href="#">
+                    <svg aria-hidden="true" class="w-6 h-6" fill="currentColor"
+                      viewBox="0 0 24 24"><path clip-rule="evenodd"
+                        d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.023.047 1.351.058 3.807.058h.468c2.456 0 2.784-.011 3.807-.058.975-.045 1.504-.207 1.857-.344.467-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.047-1.023.058-1.351.058-3.807v-.468c0-2.456-.011-2.784-.058-3.807-.045-.975-.207-1.504-.344-1.857a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                        fill-rule="evenodd"></path></svg>
+                    <span class="sr-only">Instagram</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div
+              class="border-t border-slate-700 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+              <p class="text-slate-400 mb-4 md:mb-0">© 2024 HealthPlus. All
+                rights reserved.</p>
+              <div class="flex space-x-4">
+                <a class="text-slate-400 hover:text-blue-400 transition-colors"
+                  href="#">Terms of Service</a>
+                <a class="text-slate-400 hover:text-blue-400 transition-colors"
+                  href="#">Privacy Policy</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+  </body></html>
